@@ -4,6 +4,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.hemant.multiselect_recyclerview.view.MultiSelectViewHolder;
+
 /**
  * Created by Hemant Saini on 11-06-2017.
  */

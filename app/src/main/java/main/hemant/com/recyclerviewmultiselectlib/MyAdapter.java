@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import com.android.hemant.multiselect_recyclerview.view.MultiSelectViewHolder;
+import com.android.hemant.multiselect_recyclerview.view.adapter.MultiSelectAdapter;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,7 +50,7 @@ public class MyAdapter extends MultiSelectAdapter {
     }
 
     @Override
-    protected int setActionBarActiveModeColor() {
+    protected int setInactiveCellColor() {
         return 0;
     }
 
