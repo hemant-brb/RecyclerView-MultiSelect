@@ -3,6 +3,7 @@ package main.hemant.com.recyclerviewmultiselectlib;
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,9 +16,11 @@ public class MyAdapter extends MultiSelectAdapter {
 
 
     private ArrayList<String> arrayList;
+    private Activity a;
 
     public MyAdapter(Activity activity, ArrayList<String> arrayList) {
         super(activity);
+        this.a = activity;
         this.arrayList = arrayList;
     }
 
@@ -57,6 +60,9 @@ public class MyAdapter extends MultiSelectAdapter {
 
     @Override
     public void onMenuItemClick(int itemId) {
+        if (itemId == R.id.item_delete) {
+            Toast.makeText(a, "Delete Clicked for " + getListOfSelectedItems().size() + " items", Toast.LENGTH_SHORT).show();
+        }
         //TODO : handle on Click of Menu Item Here..
         //TODO : call getListOfSelectedItems() to get List of Positions of Selected Items
     }

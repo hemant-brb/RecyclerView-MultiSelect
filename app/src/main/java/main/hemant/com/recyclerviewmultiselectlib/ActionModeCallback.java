@@ -41,6 +41,7 @@ public class ActionModeCallback implements ActionMode.Callback {
     @Override
     public boolean onActionItemClicked(ActionMode actionMode, MenuItem menuItem) {
         mMenuItemClickInterface.onMenuItemClick(menuItem.getItemId());
+        onFinishActionMode();
         return true;
     }
 
