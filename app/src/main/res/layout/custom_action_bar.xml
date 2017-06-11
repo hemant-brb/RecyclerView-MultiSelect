@@ -11,8 +11,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
-        android:paddingLeft="20dp"
+        android:paddingEnd="20dp"
+        android:paddingLeft="15dp"
         android:paddingRight="20dp"
+        android:paddingStart="15dp"
         android:text="@string/select"
         android:textColor="@android:color/white"
         android:textSize="18sp" />

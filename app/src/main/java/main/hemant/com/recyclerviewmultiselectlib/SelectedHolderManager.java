@@ -13,8 +13,13 @@ import java.util.List;
 
 public class SelectedHolderManager {
 
-    private SparseArray<WeakReference<RecyclerView.ViewHolder>> mHoldersByPosition =
-            new SparseArray<>();
+    private SparseArray<WeakReference<RecyclerView.ViewHolder>> mHoldersByPosition;
+
+
+    public SelectedHolderManager() {
+        this.mHoldersByPosition = new SparseArray<>();
+    }
+
 
 
     public RecyclerView.ViewHolder getHolder(int position) {

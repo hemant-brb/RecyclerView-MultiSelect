@@ -95,7 +95,7 @@ public abstract class MultiSelectAdapter extends RecyclerView.Adapter<MultiSelec
 
     @Override
     public void updateSelectedCount(int count) {
-        String str = count + " Selected";
+        String str = count + " "+mActivity.getString(R.string.selected);
         if (tv != null)
             tv.setText(str);
     }

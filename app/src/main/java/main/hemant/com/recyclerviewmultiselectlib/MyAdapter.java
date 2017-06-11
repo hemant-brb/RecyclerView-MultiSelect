@@ -67,4 +67,5 @@ public class MyAdapter extends MultiSelectAdapter {
     protected List<Integer> getListOfSelectedItems() {
         return super.getListOfSelectedItems();
     }
+
 }
