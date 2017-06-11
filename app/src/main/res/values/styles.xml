@@ -11,7 +11,7 @@
     </style>
 
     <style name="ActionModeStyle" parent="@style/Widget.AppCompat.ActionMode">
-        <item name="background">@android:color/holo_red_dark</item>
+        <item name="background">@android:color/darker_gray</item>
         <item name="titleTextStyle">@style/ActionModeTitleTextStyle</item>
     </style>
 
