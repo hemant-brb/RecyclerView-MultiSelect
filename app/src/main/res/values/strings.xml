@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RecyclerViewMultiselect</string>
+    <string name="select_all">Select All</string>
+    <string name="select">Select</string>
 </resources>

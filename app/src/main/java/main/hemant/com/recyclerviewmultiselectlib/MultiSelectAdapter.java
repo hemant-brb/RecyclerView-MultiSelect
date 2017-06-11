@@ -3,6 +3,7 @@ package main.hemant.com.recyclerviewmultiselectlib;
 import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -10,7 +11,7 @@ import java.util.List;
  * Created by Hemant Saini on 11-06-2017.
  */
 
-public abstract class MultiSelectAdapter extends RecyclerView.Adapter<MultiSelectViewHolder> implements ActionModeInterface, MenuItemClickCallback {
+public abstract class MultiSelectAdapter extends RecyclerView.Adapter<MultiSelectViewHolder> implements ActionModeInterface, MenuItemClickInterface {
 
 
     private Activity mActivity;
@@ -80,8 +81,23 @@ public abstract class MultiSelectAdapter extends RecyclerView.Adapter<MultiSelec
     }
 
     @Override
-    public void onAllItemSelect(){
+    public void onAllItemSelect() {
         mMultiSelectManager.selectAllItems(getItemCount());
+    }
+
+
+    private TextView tv;
+
+    @Override
+    public void setTextView(TextView tv) {
+        this.tv = tv;
+    }
+
+    @Override
+    public void updateSelectedCount(int count) {
+        String str = count + " Selected";
+        if (tv != null)
+            tv.setText(str);
     }
 
 }

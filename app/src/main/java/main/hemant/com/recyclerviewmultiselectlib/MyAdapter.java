@@ -51,10 +51,9 @@ public class MyAdapter extends MultiSelectAdapter {
         return 0;
     }
 
-
     @Override
     protected int getActionModeMenuRes() {
-        return R.menu.action_mode_menu;
+        return 0;
     }
 
     @Override

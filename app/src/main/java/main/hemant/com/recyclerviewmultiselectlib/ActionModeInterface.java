@@ -10,4 +10,6 @@ public interface ActionModeInterface {
 
     public void setActionModeDisable();
 
+    public void updateSelectedCount(int count);
+
 }

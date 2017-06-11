@@ -2,8 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <item
         android:id="@+id/select_all"
+        android:orderInCategory="100"
+        android:showAsAction="never"
         android:title="@string/select_all"
         app:showAsAction="never" />
 

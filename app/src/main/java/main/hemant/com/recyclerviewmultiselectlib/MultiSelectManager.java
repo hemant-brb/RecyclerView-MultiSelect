@@ -22,7 +22,6 @@ public class MultiSelectManager {
     private int mSelectedCellCount;
     private int mColor;
 
-
     private MultiSelectManager() {
         mSelectedCellCount = 0;
         mSelectedHolderManager = new SelectedHolderManager();
@@ -66,6 +65,7 @@ public class MultiSelectManager {
             mActionModeInterface.setActionModeDisable();
             return;
         }
+        mActionModeInterface.updateSelectedCount(mSelectedCellCount);
         refreshView(position, v);
     }
 
@@ -79,6 +79,7 @@ public class MultiSelectManager {
             view.setBackgroundColor(Color.WHITE);
         }
     }
+
 
     private void refreshAllHolders() {
         for (RecyclerView.ViewHolder holder : mSelectedHolderManager.getTrackedHolders()) {
@@ -105,6 +106,7 @@ public class MultiSelectManager {
             if (this.mSelections.valueAt(i)) {
                 positions.add(Integer.valueOf(this.mSelections.keyAt(i)));
             }
+
         }
         return positions;
     }
@@ -130,5 +132,7 @@ public class MultiSelectManager {
         }
         refreshAllHolders();
         mSelectedCellCount = itemCount;
+        mActionModeInterface.updateSelectedCount(mSelectedCellCount);
     }
+
 }
