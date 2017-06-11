@@ -40,6 +40,10 @@ public class ActionModeCallback implements ActionMode.Callback {
 
     @Override
     public boolean onActionItemClicked(ActionMode actionMode, MenuItem menuItem) {
+        if (menuItem.getItemId() == R.id.select_all) {
+            mMenuItemClickInterface.onAllItemSelect();
+            return true;
+        }
         mMenuItemClickInterface.onMenuItemClick(menuItem.getItemId());
         onFinishActionMode();
         return true;

@@ -70,9 +70,6 @@ public class MultiSelectManager {
     }
 
 
-
-
-
     public void refreshView(int position, View view) {
         if (isSelected(position)) {
             if (mColor == 0)
@@ -127,4 +124,11 @@ public class MultiSelectManager {
         this.mColor = mColor;
     }
 
+    public void selectAllItems(int itemCount) {
+        for (int i = 0; i < itemCount; i++) {
+            setSelected(i, true);
+        }
+        refreshAllHolders();
+        mSelectedCellCount = itemCount;
+    }
 }

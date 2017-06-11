@@ -8,4 +8,6 @@ public interface MenuItemClickCallback {
 
     public void onMenuItemClick(int itemId);
 
+    public void onAllItemSelect();
+
 }

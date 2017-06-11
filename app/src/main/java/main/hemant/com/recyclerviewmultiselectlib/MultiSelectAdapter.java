@@ -79,4 +79,9 @@ public abstract class MultiSelectAdapter extends RecyclerView.Adapter<MultiSelec
         return mMultiSelectManager.getSelectedPositions();
     }
 
+    @Override
+    public void onAllItemSelect(){
+        mMultiSelectManager.selectAllItems(getItemCount());
+    }
+
 }
